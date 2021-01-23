@@ -81,6 +81,8 @@ Route::get('allusers', [UserController::class, 'showAllUsers']);
 Route::get('delete/{id}', [UserController::class, 'deleteUser']);
 Route::get('edit/{id}', [UserController::class, 'showData']);
 Route::post('/edit', [UserController::class, 'editUser']);
+Route::get('database/operations', [UserController::class, 'databaseOperations']);
+Route::get('database/jobs', [UserController::class, 'getUserJob']);
 
 
 

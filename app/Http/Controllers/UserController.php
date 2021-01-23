@@ -76,7 +76,43 @@ class UserController extends Controller
         $request->session()->flash('edited', 'edited');
         return redirect('allusers');
 
-    }   
+    }
+    
+    public function databaseOperations()
+    {
+        return DB::table('users')->get();            // Get all data from a table
+        //return (array)DB::table('users')->find(6);   //Find by id
+        /*return DB::table('users')->insert(             //Insert
+            [
+                'user_name' => 'preeti19',
+                'email' => 'preeti19@rj.com',
+                'password' => 'preeti123'
+            ]
+        ); */
+        /*return DB::table('users')->where('id', 10)->update(     //Update
+            [
+                'user_name' => 'Preeti19',
+                'email' => 'preeti19@rj.com',
+                'password' => 'preeti123'
+            ]
+        ); */
+
+        //return DB::table('users')->where('id', 10)->delete();   //Delete
+
+        // Agregate Functions =====>
+
+        //return DB::table('users')->avg('id');   //Average
+        //return DB::table('users')->count();     //Count
+        //return DB::table('users')->min('id');     //Minimum
+        //return DB::table('users')->max('id');     //Maximum
+
+    }
+
+    public function getUserJob()  //Join Concept
+    {
+        //return DB::table('users')->join('company', 'users.id',  '=', 'company.emp_id')->get();
+        //return DB::table('users')->join('company', 'users.id',  '=', 'company.emp_id')->select('company.*')->get();
+    }
 
     
 }

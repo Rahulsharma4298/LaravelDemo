@@ -19,6 +19,9 @@
   <a class="list-group-item d-flex justify-content-between align-items-center alert-info btn-dark btn" href="/members">
     All Members (API)
   </a>
+  <a class="list-group-item d-flex justify-content-between align-items-center alert-info btn-dark btn" href="/database/operations">
+    Database Operations
+  </a>
 </ul>
 </div>
 
