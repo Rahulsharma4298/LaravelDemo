@@ -23,6 +23,7 @@
     Database Operations
   </a>
 </ul>
+<br>
 </div>
 
 <x-footer/>
