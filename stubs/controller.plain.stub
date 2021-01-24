@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class {{ class }} extends Controller
+{
+    // public function index()              // Generate custom structure for each model you make using stubs
+    {
+
+    }
+}
+
+////php artisan stub:publish  //stub files will be created
