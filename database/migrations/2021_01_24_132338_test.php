@@ -24,7 +24,7 @@ class Test extends Migration
             //php artisan migrate:rollback   To rollback last migration
             //php artisan migrate:rollback --step N   To rollback last N migration(s)
             //php artisan migrate:refresh   To refresh the changes
-            //php artisan migrate --path=/database/migrations/[migration_file_name]  To migrate single table  
+            //php artisan migrate --path=/database/migrations/[migration_file_name.php]  To migrate single table  
         });
     }
 
