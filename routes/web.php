@@ -7,6 +7,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Str;                   //Using String Class
+use App\Mail\SampleMail;                   //Using created mail and making route to show it
 
 
 
@@ -87,6 +88,9 @@ Route::get('database/operations', [UserController::class, 'databaseOperations'])
 Route::get('database/jobs', [UserController::class, 'getUserJob']);
 Route::get('company/{key}', [CompanyController::class, 'index']);           //Route Model Binding
 //Route::get('company/{company_name}', [CompanyController::class, 'index']); //To get company details by other key like name
+Route::get('mail', function () {
+    return new SampleMail();
+});
 
 $data = "hello, this is laravel";
 // $data = Str::ucfirst($data);
