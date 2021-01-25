@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\UploadController;
+use Illuminate\Support\Str;                   //Using String Class
 
 
 
@@ -84,7 +85,14 @@ Route::post('/edit', [UserController::class, 'editUser']);
 Route::get('database/operations', [UserController::class, 'databaseOperations']);
 Route::get('database/jobs', [UserController::class, 'getUserJob']);
 
+$data = "hello, this is laravel";
+// $data = Str::ucfirst($data);
+// $data = Str::replaceFirst('Hello', 'hi', $data);
+// $data = Str::camel($data);
+//We can do this more fluently using Fluent string
 
+$data = Str::of($data)->ucfirst()->replace('Hello', 'hi', $data)->camel();  //See, chaining becomes easy and elegent
+echo $data;
 
 
 
