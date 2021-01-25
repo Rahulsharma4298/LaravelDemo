@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Str;                   //Using String Class
@@ -84,6 +85,8 @@ Route::get('edit/{id}', [UserController::class, 'showData']);
 Route::post('/edit', [UserController::class, 'editUser']);
 Route::get('database/operations', [UserController::class, 'databaseOperations']);
 Route::get('database/jobs', [UserController::class, 'getUserJob']);
+Route::get('company/{key}', [CompanyController::class, 'index']);           //Route Model Binding
+//Route::get('company/{company_name}', [CompanyController::class, 'index']); //To get company details by other key like name
 
 $data = "hello, this is laravel";
 // $data = Str::ucfirst($data);
@@ -92,7 +95,7 @@ $data = "hello, this is laravel";
 //We can do this more fluently using Fluent string
 
 $data = Str::of($data)->ucfirst()->replace('Hello', 'hi', $data)->camel();  //See, chaining becomes easy and elegent
-echo $data;
+//echo $data;
 
 
 
