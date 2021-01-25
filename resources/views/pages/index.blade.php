@@ -22,6 +22,9 @@
   <a class="list-group-item d-flex justify-content-between align-items-center alert-info btn-dark btn" href="/database/operations">
     Database Operations
   </a>
+  <a class="list-group-item d-flex justify-content-between align-items-center alert-info btn-dark btn" href="/mail">
+    Markdown Mails
+  </a>
 </ul>
 <br>
 </div>
