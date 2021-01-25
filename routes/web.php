@@ -101,6 +101,18 @@ $data = "hello, this is laravel";
 $data = Str::of($data)->ucfirst()->replace('Hello', 'hi', $data)->camel();  //See, chaining becomes easy and elegent
 //echo $data;
 
+//Create custom artisan commands==>
+/*
+php artisan make:command showdb
+Console command created successfully.
+
+Command will be found in app\console\Commands\command_name.php
+edit the signature and description in command_name.php
+Register it in kernal.php
+
+
+*/
+
 
 
 
